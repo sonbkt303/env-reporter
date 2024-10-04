@@ -1,0 +1,22 @@
+{
+  expand: 'names,schema',
+  startAt: 0,
+  maxResults: 1,
+  total: 2818,
+  issues: [
+    {
+      expand: 'operations,versionedRepresentations,editmeta,changelog,renderedFields',
+      id: '292941',
+      self: 'https://vts.vatech.com/rest/api/2/issue/292941',
+      key: 'EVNKCLAB-2924',
+      fields: [Object],
+      operations: [Object]
+    }
+  ],
+  names: { summary: 'Summary', assignee: 'Assignee', status: 'Status' },
+  schema: {
+    summary: { type: 'string', system: 'summary' },
+    assignee: { type: 'user', system: 'assignee' },
+    status: { type: 'status', system: 'status' }
+  }
+}
