@@ -1,4 +1,8 @@
 import axios from 'axios';
+import moment from 'moment';
+import fs from 'fs';
+
+const startOfWeek = moment().startOf('week').format('YYYY-MM-DD');
 
 const bodyData = {
   "expand": [
@@ -7,16 +11,32 @@ const bodyData = {
     "operations"
   ],
   "fields": [
+    // "*all"
     "summary",
     "status",
-    "assignee"
+    "assignee",
+    "link"
   ],
-  "jql": "project = EVNKCLAB",
-  "maxResults": 1,
-  "startAt": 0
+  "jql": `project IN (EVNKCLAB, "VT_Clever Lab Dev_PJT") AND issuetype in (Bug, Improvement) AND status in (Open, "In Progress", Reopened, Resolved, Closed) AND assignee in (currentUser()) AND updatedDate >=startOfWeek() AND updatedDate <= endOfWeek()`,
+  "maxResults": 100,
+  "startAt": 0,
 };
 
-const token = "sampelToken";
+
+// Function to append data to a file
+const appendToFile = (filePath, data) => {
+  fs.appendFile(filePath, data + '\n', (err) => {
+    if (err) {
+      console.error(`Error appending to file ${filePath}:`, err);
+    } else {
+      console.log(`Data successfully appended to ${filePath}`);
+    }
+  });
+};
+
+const BASE_URL = 'https://vts.vatech.com/browse/';
+const token = "sampleToken";
+
 axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
   headers: {
     'Authorization': `Bearer ${token}`,
@@ -26,9 +46,19 @@ axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
 })
   .then(response => {
     console.log(`Response: ${response.status} ${response.statusText}`);
-    const data = response.data;
+    const issues = response.data.issues;
 
-    console.log(data.issues[0])
+    const formattedIssues = issues.map(issue => {
+      return `[${issue.key}-${issue.fields.status.name}]: ${issue.fields.summary}. (${BASE_URL + issue.key})`;
+    });
 
+    const fileName = 'report.txt';
+    const reportContent = [
+      `Start of the week: ${startOfWeek}`,
+      ...formattedIssues,
+      "------------------------------------"
+    ].join('\n');
+
+    appendToFile(fileName, reportContent);
   })
   .catch(err => console.error(err));
