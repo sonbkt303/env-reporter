@@ -35,7 +35,7 @@ const appendToFile = (filePath, data) => {
 };
 
 const BASE_URL = 'https://vts.vatech.com/browse/';
-const token = "sampleToken";
+const token = "";
 
 axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
   headers: {
@@ -49,7 +49,7 @@ axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
     const issues = response.data.issues;
 
     const formattedIssues = issues.map(issue => {
-      return `[${issue.key}-${issue.fields.status.name}]: ${issue.fields.summary}. (${BASE_URL + issue.key})`;
+      return `Issue: ${issue.key} | Status: ${issue.fields.status.name} | Summary: ${issue.fields.summary} | Link: (${BASE_URL + issue.key})`;
     });
 
     const fileName = 'report.txt';
