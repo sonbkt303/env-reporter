@@ -1,0 +1,21 @@
+Start of the fix version: V1.3.5.P12
+Assignee: Mike | Issue: VLAB-2083 | Status: Resolved | Summary: [Back end] [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file  | Link: (https://vts.vatech.com/browse/VLAB-2083)
+Assignee: Tom | Issue: VLAB-2080 | Status: Resolved | Summary: Review code: EVNKCLAB-2931 [Payment] [Add Order] Display wrong result when searching order by Patient field | Link: (https://vts.vatech.com/browse/VLAB-2080)
+Assignee: Nemo | Issue: VLAB-2078 | Status: Resolved | Summary: [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file | Link: (https://vts.vatech.com/browse/VLAB-2078)
+Assignee: Tom | Issue: VLAB-2061 | Status: Resolved | Summary: Reviewcode: EVNKCLAB-2930: [UI] [Orders/Lab Setting] Some characters are not capitalized | Link: (https://vts.vatech.com/browse/VLAB-2061)
+Assignee: Nemo | Issue: VLAB-2035 | Status: Resolved | Summary: [Dev] Deployment V1.3.5-P9 | Link: (https://vts.vatech.com/browse/VLAB-2035)
+------------------------------------
+Start of the fix version: V1.3.5.P12
+ Issue: VLAB-2083 | Status: Resolved | Assignee: Mike | Summary: [Back end] [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file  | Link: (https://vts.vatech.com/browse/VLAB-2083)
+ Issue: VLAB-2080 | Status: Resolved | Assignee: Tom | Summary: Review code: EVNKCLAB-2931 [Payment] [Add Order] Display wrong result when searching order by Patient field | Link: (https://vts.vatech.com/browse/VLAB-2080)
+ Issue: VLAB-2078 | Status: Resolved | Assignee: Nemo | Summary: [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file | Link: (https://vts.vatech.com/browse/VLAB-2078)
+ Issue: VLAB-2061 | Status: Resolved | Assignee: Tom | Summary: Reviewcode: EVNKCLAB-2930: [UI] [Orders/Lab Setting] Some characters are not capitalized | Link: (https://vts.vatech.com/browse/VLAB-2061)
+ Issue: VLAB-2035 | Status: Resolved | Assignee: Nemo | Summary: [Dev] Deployment V1.3.5-P9 | Link: (https://vts.vatech.com/browse/VLAB-2035)
+------------------------------------
+Start of the fix version: V1.3.5.P12
+ Issue: VLAB-2083 | Status: Resolved | Summary: [Back end] [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file  | Link: (https://vts.vatech.com/browse/VLAB-2083) | Assignee: Mike
+ Issue: VLAB-2080 | Status: Resolved | Summary: Review code: EVNKCLAB-2931 [Payment] [Add Order] Display wrong result when searching order by Patient field | Link: (https://vts.vatech.com/browse/VLAB-2080) | Assignee: Tom
+ Issue: VLAB-2078 | Status: Resolved | Summary: [Lab Setting] Initial Bulk Setting> Prosthesis > Base Price column > Change Input rule/Update template file | Link: (https://vts.vatech.com/browse/VLAB-2078) | Assignee: Nemo
+ Issue: VLAB-2061 | Status: Resolved | Summary: Reviewcode: EVNKCLAB-2930: [UI] [Orders/Lab Setting] Some characters are not capitalized | Link: (https://vts.vatech.com/browse/VLAB-2061) | Assignee: Tom
+ Issue: VLAB-2035 | Status: Resolved | Summary: [Dev] Deployment V1.3.5-P9 | Link: (https://vts.vatech.com/browse/VLAB-2035) | Assignee: Nemo
+------------------------------------

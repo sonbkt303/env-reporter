@@ -61,7 +61,7 @@ axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
     );
 
     const formattedIssues = filteredIssues.map(issue => {
-      return `Assignee: ${issue.fields?.assignee?.displayName} | Issue: ${issue.key} | Status: ${issue.fields.status.name} | Summary: ${issue.fields.summary} | Link: (${BASE_URL + issue.key})`;
+      return ` Issue: ${issue.key} | Status: ${issue.fields.status.name} | Summary: ${issue.fields.summary} | Link: (${BASE_URL + issue.key}) | Assignee: ${issue.fields?.assignee?.displayName}`;
     });
 
     const fileName = 'report-team.txt';
