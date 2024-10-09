@@ -36,4 +36,8 @@ Start of the fix version: V1.3.5.P13
  Summary: [Prosthesis Bulk Setting] Do not check invalid value in Favorites field 
  Link: (https://vts.vatech.com/browse/EVNKCLAB-2932) 
 
+10: Issue: EVNKCLAB-2929 | Status: Resolved | Assignee: Ceuli 
+ Summary: [Payment] [Issuance] Should show excluded orders in Add Order dialog when editing invoice 
+ Link: (https://vts.vatech.com/browse/EVNKCLAB-2929) 
+
 ------------------------------------
