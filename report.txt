@@ -1,0 +1,6 @@
+Start of the week: 2024-10-06
+Issue: VLAB-2034 | Status: Resolved | Summary: [Prod] [MCIS] Slow performance on [Lab Setting > Prosthesis] section | Link: (https://vts.vatech.com/browse/VLAB-2034)
+Issue: EVNKCLAB-2934 | Status: Reopened | Summary: [Prosthesis Bulk Setting] Wrong data in prosthesis list after using bulk prosthesis function | Link: (https://vts.vatech.com/browse/EVNKCLAB-2934)
+Issue: EVNKCLAB-2926 | Status: Closed | Summary: [Statistic] [By Date] Do not display data in Summary table | Link: (https://vts.vatech.com/browse/EVNKCLAB-2926)
+Issue: EVNKCLAB-2839 | Status: Closed | Summary: [Migration] [Permission] When Order View permission = No Access/Assigned Orders Only, permission of Payment, Gold, Statistic is not changed to No Access | Link: (https://vts.vatech.com/browse/EVNKCLAB-2839)
+------------------------------------

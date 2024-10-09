@@ -40,9 +40,6 @@ const appendToFile = (filePath, data) => {
   });
 };
 
-
-console.log("token", token)
-
 axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
   headers: {
     'Authorization': `Bearer ${token}`,
