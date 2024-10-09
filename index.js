@@ -1,8 +1,14 @@
 import axios from 'axios';
 import moment from 'moment';
 import fs from 'fs';
+import dotenv from 'dotenv';
+
+// Load environment variables from .env file
+dotenv.config();
 
 const startOfWeek = moment().startOf('week').format('YYYY-MM-DD');
+const BASE_URL = 'https://vts.vatech.com/browse/';
+const token = process.env.JIRA_API_TOKEN;
 
 const bodyData = {
   "expand": [
@@ -34,8 +40,8 @@ const appendToFile = (filePath, data) => {
   });
 };
 
-const BASE_URL = 'https://vts.vatech.com/browse/';
-const token = "";
+
+console.log("token", token)
 
 axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
   headers: {
@@ -45,7 +51,7 @@ axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
   }
 })
   .then(response => {
-    console.log(`Response: ${response.status} ${response.statusText}`);
+    // console.log(`Response: ${response.status} ${response.statusText}`);
     const issues = response.data.issues;
 
     const formattedIssues = issues.map(issue => {
