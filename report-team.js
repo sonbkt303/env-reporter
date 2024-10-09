@@ -57,16 +57,18 @@ axios.post('https://vts.vatech.com/rest/api/2/search', bodyData, {
     const filteredIssues = issues.filter(issue =>
       !issue.fields.summary.includes('Code review') &&
       !issue.fields.summary.includes('Code Quality') &&
-      !issue.fields.summary.includes('Code Review')
+      !issue.fields.summary.includes('Code Review') && 
+      !issue.fields.summary.includes('Review code:') &&
+      !issue.fields.summary.includes('Reviewcode') 
     );
 
-    const formattedIssues = filteredIssues.map(issue => {
-      return ` Issue: ${issue.key} | Status: ${issue.fields.status.name} | Summary: ${issue.fields.summary} | Link: (${BASE_URL + issue.key}) | Assignee: ${issue.fields?.assignee?.displayName}`;
+    const formattedIssues = filteredIssues.map((issue, index)=> {
+      return `${index + 1}: Issue: ${issue.key} | Status: ${issue.fields.status.name} | Assignee: ${issue.fields?.assignee?.displayName} \n Summary: ${issue.fields.summary} \n Link: (${BASE_URL + issue.key}) \n`;
     });
 
     const fileName = 'report-team.txt';
     const reportContent = [
-      `Start of the fix version: ${fixIssueVersion}`,
+      `Start of the fix version: ${fixIssueVersion} \n`,
       ...formattedIssues,
       "------------------------------------"
     ].join('\n');
